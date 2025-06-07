@@ -2,7 +2,11 @@ const express=require("express");
 const cors=require("cors");
 const mongoose=require("mongoose");
 const app=express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://full-stack-frontend.onrender.com"], // Replace this with your deployed frontend URL
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 require('dotenv').config();
 
 app.use(express.json());

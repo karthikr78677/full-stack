@@ -101,7 +101,7 @@ const SignUp = () => {
     
       async function postData(){
         try{
-          const response=await Axios.post("http://localhost:3001/signup",formData);
+          const response=await Axios.post("https://full-stack-1-md7o.onrender.com/signup",formData);
           if(response){
             alert(response.data.message)
           }

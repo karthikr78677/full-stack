@@ -7,7 +7,7 @@ require('dotenv').config();
 
 app.use(express.json());
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3001;
 const MONGO_URI = process.env.MONGO_URI;
 async function connectDB() {
     try {

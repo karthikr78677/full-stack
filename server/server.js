@@ -3,7 +3,7 @@ const cors=require("cors");
 const mongoose=require("mongoose");
 const app=express();
 app.use(cors({
-  origin: ["https://full-stack-frontend.onrender.com"], // Replace this with your deployed frontend URL
+  origin: ["https://full-stack-1-frontend.onrender.com"], // Replace this with your deployed frontend URL
   methods: ["GET", "POST"],
   credentials: true
 }));

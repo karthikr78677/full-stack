@@ -15,18 +15,13 @@ const PORT = process.env.PORT || 3001;
 const MONGO_URI = process.env.MONGO_URI;
 async function connectDB() {
     try {
-        await mongoose.connect(MONGO_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        });
+        await mongoose.connect(MONGO_URI);
         console.log("✅ MongoDB Connected");
     } catch (err) {
         console.error("❌ MongoDB Connection Error:", err);
         process.exit(1);
     }
 }
-connectDB();
-
 connectDB();
 
 const signUpSchema=new mongoose.Schema({
